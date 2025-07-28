@@ -3,17 +3,13 @@ from azure.cosmos import CosmosClient #to connect to cosmosDB
 from dotenv import load_dotenv #loads the secrets (from .env) into the environment
 from rich.table import Table
 from rich.console import Console
+from config import COSMOS_URL, COSMOS_KEY, COSMOS_DB
 
 # env_path = find_dotenv()
 
 # print("working directory: ", os.getcwd())
 # print("dotenv location: ", env_path)
 
-load_dotenv()
-
-COSMOS_URL = os.getenv("COSMOS_URL")
-COSMOS_KEY = os.getenv("COSMOS_KEY")
-COSMOS_DB = os.getenv("COSMOS_DB")
 
 client = CosmosClient(COSMOS_URL, COSMOS_KEY)
 db = client.get_database_client(COSMOS_DB) 
