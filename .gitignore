@@ -1,0 +1,18 @@
+# ignore secrets
+.env
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+.venv/
+venv/
+
+*.so
+*.dylib
+
+build/
+dist/
+*.egg-info/
